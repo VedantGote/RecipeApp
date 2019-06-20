@@ -4,7 +4,7 @@ import Form from "./Form.js"
 import "./App.css"
 import Recipe from "./Recipe.js"
 
-const API_KEY = "12e721a1c0937791d14f7bf1cdb21626"
+const API_KEY = "63e2e97ef2bd864992931f357943b363"
 
 
 class App extends React.Component
@@ -24,7 +24,7 @@ class App extends React.Component
     const data = await api_call.json();
     const recipearray = data.recipes
     this.setState({data:recipearray})
-    console.log()
+  
 
     
     

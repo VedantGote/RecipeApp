@@ -1,17 +1,17 @@
 import React from "react"
-import {BrowserRouter as Router,Switch,Route} from "react-router-dom"
+import {BrowserRouter,Switch,Route} from "react-router-dom"
 
 import App from "./App.js"
 import RecipeDetail from "./RecipeDetail.js"
 
 const Router = () =>
 (
-  <Router>
+  <BrowserRouter>
     <Switch>
-      <Route path = "/" component = {App}/>
-      <Route path = "/recipe" component = {RecipeDetail}/>
+      <Route path = "/" component = {App} exact />
+      <Route path = "/recipedetail/:id" component = {RecipeDetail} exact />
     </Switch>
-  </Router>
+  </BrowserRouter>
 )
 
 export default Router
