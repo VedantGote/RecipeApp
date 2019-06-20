@@ -9,9 +9,9 @@ class Form extends React.Component
   render()
   {
     return <div>
-            <form onSubmit = {this.props.getRep}>
-              <input type = "text" name = "search" placeholder = "Type a recipe"></input>
-              <button>Search</button>
+            <form onSubmit = {this.props.getRep} style = {{marginBottom:"2rem"}}>
+              <input className ="form__input" type = "text" name = "search"/>
+              <button className ="form__button">Search</button>
             </form>
           </div>
   }
