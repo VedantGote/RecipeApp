@@ -24,11 +24,17 @@ class App extends React.Component
     const data = await api_call.json();
     const recipearray = data.recipes
     this.setState({data:recipearray})
-  
-
-    
-    
-
+  }
+  componentDidMount()
+  {
+    const json = localStorage.getItem("lrep");
+    const grep = JSON.parse(json);
+    this.setState({data:grep})
+  }
+  componentDidUpdate()
+  {
+    const lrep = JSON.stringify(this.state.data);
+    localStorage.setItem("lrep",lrep);
   }
   render()
   {   
