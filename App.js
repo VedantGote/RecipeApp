@@ -7,7 +7,7 @@ class App extends React.Component
   getRecipe = (event) =>
   {
     event.preventDefault();
-    console.log("it ij");
+    console.log("working it ij");
   }
   render()
   {
